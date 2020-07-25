@@ -4186,3 +4186,29 @@ h2.underline:before{
 		max-width: 100%;
 	}
 }
+
+/* shortcode button
+*/
+
+.btn-wrapper{
+	width: 80%;
+    display: flex;
+	margin: 0 auto;
+	align-items: center;
+	padding: 10px 15px;
+
+	border-radius: 15px;
+	text-decoration: none;
+	box-shadow: 0 4px 0 #3e3e3e
+}
+.btn-txt{
+	display: flex;
+	margin: 0 auto;
+	text-align: center;
+	
+}
+
+.btn-wrapper:hover {
+	transform: translateY(4px);
+	box-shadow: none;
+}
