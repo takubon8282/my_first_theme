@@ -345,7 +345,7 @@ function firstButton($atts ,$content = null) {
 		"content" => $content
 	];
 	$output = <<< EOT
-		<a class="btn-wrapper" href="{$buttonObj->link}" style="background: '{$buttonObj->color}';">
+		<a class="btn-wrapper" href="{$buttonObj->link}" style="background: {$buttonObj->color};">
 			<span class="btn-txt">{$buttonObj->content}</span>
 		</a>
 	EOT;
