@@ -335,24 +335,20 @@ function wsu_business_read_more_tag( $html ) {
 
 add_filter( 'the_content_more_link', 'wsu_business_read_more_tag' );
 
-function firstBotton($atts, $contents = null){
+function firstButton($atts ,$content = null) {
 	$color = (isset($atts['color'])) ? esc_attr($atts['color']) : "#FF1659";
 	$link =  (isset($atts['link'])) ? esc_attr($atts['link']) : null;
 	$content = do_shortcode($content);
-
-	$buttonobj = (OBJECT) [
+	$buttonObj = (OBJECT) [
 		"color" => $color,
 		"link" => $link,
 		"content" => $content
 	];
-
 	$output = <<< EOT
-     <a class="btn-wrapper" href="{$buttonObj->link}" style="background: '{$buttonObj->color}';">
-      <span class="btn-txt">{$buttonObj->content}</span>
-     </a>  
-    EOT;
-
-  return $output;
+		<a class="btn-wrapper" href="{$buttonObj->link}" style="background: '{$buttonObj->color}';">
+			<span class="btn-txt">{$buttonObj->content}</span>
+		</a>
+	EOT;
+	return $output;
 }
-
 add_shortcode('custom-button','firstButton');
